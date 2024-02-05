@@ -22,8 +22,6 @@ public class Inventory {
 
     @PostPersist
     public void onPostPersist() {
-        StockDecreased stockDecreased = new StockDecreased(this);
-        stockDecreased.publishAfterCommit();
     }
 
     public static InventoryRepository repository() {
